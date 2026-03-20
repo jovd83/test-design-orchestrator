@@ -1,0 +1,5 @@
+| Coverage Item | Category | Covered By | Notes |
+|---|---|---|---|
+{% for row in coverage_rows %}
+| {{ row.item }} | {{ row.category | default("") }} | {{ row.covered_by | default("") }} | {{ row.notes | default("") }} |
+{% endfor %}

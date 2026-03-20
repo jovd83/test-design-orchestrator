@@ -1,0 +1,22 @@
+| Classification | # |{% for c in classifications %}{% for v in c.values %} {{ v }} |{% endfor %}{% endfor %}
+|----------------|---|{% for c in classifications %}{% for v in c.values %}----------|{% endfor %}{% endfor %}
+{% for i in range(c1.values | length) %}
+    {% for j in range(c2.values | length) %}
+        {% for k in range(c3.values | length) %}
+| Datapoint {{ loop.index + (j * c3.values | length) + (i * c2.values | length * c3.values | length) + 1 }} | {{ loop.index + (j * c3.values | length) + (i * c2.values | length * c3.values | length) + 1 }} | 
+    {% for c in classifications %}
+        {% for v in c.values %}
+            {% if c.name == c1.name and v == c1.values[i] %}
+                X |
+            {% elif c.name == c2.name and v == c2.values[j] %}
+                X |
+            {% elif c.name == c3.name and v == c3.values[k] %}
+                X |
+            {% else %}
+                |
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}

@@ -1,0 +1,3 @@
+Folder,Name,Objective,Status,Precondition,Labels,Step,Expected Result,Execution Type,Priority,Estimated Time,Is Open
+"Imported Tests","Reject password shorter than minimum length","Validate the lower invalid boundary for password length.","Draft","The registration form is open.","bva smoke","Enter a password with 7 characters.","The password is rejected.","Manual","Medium","5m","Yes"
+"","","","","","","Submit the form.","The user sees ""Password length is invalid.""","","","",""

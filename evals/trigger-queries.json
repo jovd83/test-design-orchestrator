@@ -1,0 +1,46 @@
+[
+  {
+    "query": "Turn this user story and acceptance criteria into test scenarios with traceability.",
+    "should_trigger": true
+  },
+  {
+    "query": "Which test design technique fits these discount rules best?",
+    "should_trigger": true
+  },
+  {
+    "query": "Generate pairwise combinations for these device options.",
+    "should_trigger": true
+  },
+  {
+    "query": "I need BDD scenarios from these checkout acceptance criteria.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you format these tests into Zephyr Scale CSV?",
+    "should_trigger": true
+  },
+  {
+    "query": "Package these BDD scenarios as Xray-importable feature files.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a Python function to validate email addresses.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize this sprint retrospective.",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me debug a React hydration issue.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create an architecture diagram for our payment service.",
+    "should_trigger": false
+  },
+  {
+    "query": "How do I install Zephyr Scale in Jira?",
+    "should_trigger": false
+  }
+]

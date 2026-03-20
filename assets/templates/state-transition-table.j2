@@ -1,0 +1,5 @@
+| Path ID | Coverage Level | Start State | Event Sequence | End State | Notes |
+|---|---|---|---|---|---|
+{% for path in paths %}
+| {{ path.id }} | {{ path.coverage_level }} | {{ path.start_state }} | {{ path.event_sequence }} | {{ path.end_state }} | {{ path.notes | default("") }} |
+{% endfor %}

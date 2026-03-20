@@ -1,0 +1,14 @@
+{% for i in range(c1.values | length) %}
+    {% for j in range(c2.values | length) %}
+        {% for k in range(c3.values | length) %}
+### Test Case {{ loop.index + (j * c3.values | length) + (i * c2.values | length * c3.values | length) + 1 }}:
+- **Title**: Verify {{ c1.name }} = {{ c1.values[i] }}, {{ c2.name }} = {{ c2.values[j] }}, {{ c3.name }} = {{ c3.values[k] }}
+- **Preconditions**: System is powered on and defaults are in place.
+- **Test Steps**:
+  1. Set {{ c1.name }} to "{{ c1.values[i] }}"
+  2. Set {{ c2.name }} to "{{ c2.values[j] }}"
+  3. Set {{ c3.name }} to "{{ c3.values[k] }}"
+- **Expected Result**: The system correctly processes the 3-wise configuration without errors.
+        {% endfor %}
+    {% endfor %}
+{% endfor %}

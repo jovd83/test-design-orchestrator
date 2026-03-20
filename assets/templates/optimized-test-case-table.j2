@@ -1,0 +1,5 @@
+| ID | Title | Combined Coverage | Reduction Rationale | Notes |
+|---|---|---|---|---|
+{% for tc in optimized_test_cases %}
+| {{ tc.id | default("") }} | {{ tc.title }} | {{ tc.coverage | default("") }} | {{ tc.reduction_rationale | default("") }} | {{ tc.notes | default("") }} |
+{% endfor %}

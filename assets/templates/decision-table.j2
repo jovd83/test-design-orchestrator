@@ -1,0 +1,8 @@
+| Type | Name | {% for rule in rules %}{{ rule.id }} | {% endfor %}
+|---|---|{% for rule in rules %}---|{% endfor %}
+{% for row in conditions %}
+| Condition | {{ row.name }} | {% for rule in rules %}{{ row.values.get(rule.id, "") }} | {% endfor %}
+{% endfor %}
+{% for row in actions %}
+| Action | {{ row.name }} | {% for rule in rules %}{{ row.values.get(rule.id, "") }} | {% endfor %}
+{% endfor %}

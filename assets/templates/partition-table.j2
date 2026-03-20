@@ -1,0 +1,5 @@
+| Condition | Partition ID | Validity | Representative | Notes |
+|---|---|---|---|---|
+{% for row in partitions %}
+| {{ row.condition }} | {{ row.id | default("") }} | {{ row.validity }} | {{ row.representative | default("") }} | {{ row.notes | default("") }} |
+{% endfor %}

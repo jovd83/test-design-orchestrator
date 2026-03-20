@@ -1,0 +1,12 @@
+{% for i in range(c1.values | length) %}
+    {% for j in range(c2.values | length) %}
+### Test Case {{ loop.index + (i * (c2.values | length)) }}: 
+- **Title**: Verify {{ c1.name }} = {{ c1.values[i] }}, {{ c2.name }} = {{ c2.values[j] }}
+- **Preconditions**: System is initialized and ready for input.
+- **Test Steps**:
+  1. Select "{{ c1.values[i] }}" for {{ c1.name }}
+  2. Select "{{ c2.values[j] }}" for {{ c2.name }}
+  3. (Optional) Set defaults or skip for other classifications
+- **Expected Result**: System should accept and correctly process the selected configuration.
+    {% endfor %}
+{% endfor %}

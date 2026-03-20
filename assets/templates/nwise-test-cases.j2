@@ -1,0 +1,10 @@
+{% for combination in combinations(*dimensions) %}
+### Test Case {{ loop.index + 1 }}:
+- **Title**: Verify {{ combination | join(', ') }}
+- **Preconditions**: System initialized and ready.
+- **Test Steps**:
+{% for i in range(N) %}
+  {{ loop.index + 1 }}. Set {{ active[i].name }} to "{{ combination[i] }}"
+{% endfor %}
+- **Expected Result**: System correctly handles input combination without error.
+{% endfor %}

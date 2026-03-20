@@ -1,0 +1,12 @@
+```jinja2
+| Classification | # |{% for c in classifications %}{% for v in c.values %} {{ v }} |{% endfor %}{% endfor %}
+|----------------|---|{% for c in classifications %}{% for v in c.values %}----------|{% endfor %}{% endfor %}
+{% set max_len = classifications | map(attribute='values') | map('length') | max %}
+{% for i in range(max_len) %}
+| Datapoint {{ i+1 }} | {{ i+1 }} | 
+    {% for c in classifications %}
+        {% for v in c.values %}
+            {% if loop.index0 == i %} X |{% else %}  |{% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}

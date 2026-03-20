@@ -1,0 +1,8 @@
+```mermaid
+graph TD
+{% for c in classifications %}
+    {{ c.abbreviation }}["{{ c.abbreviation }} {{ c.name }}"]
+    {% for v in c.values %}
+        {{ c.abbreviation }} --> {{ c.abbreviation }}_{{ loop.index }}(("v{{ loop.index }} {{ v }}"))
+    {% endfor %}
+{% endfor %}

@@ -1,0 +1,20 @@
+| Classification | # |{% for c in classifications %}{% for v in c.values %} {{ v }} |{% endfor %}{% endfor %}
+|----------------|---|{% for c in classifications %}{% for v in c.values %}----------|{% endfor %}{% endfor %}
+{% set dimensions = active | map(attribute='values') | list %}
+{% for combination in combinations(*dimensions) %}
+| Datapoint {{ loop.index + 1 }} | {{ loop.index + 1 }} | 
+    {% for c in classifications %}
+        {% set matched = namespace(flag=false) %}
+        {% for i in range(N) %}
+            {% if c.name == active[i].name and combination[i] in c.values %}
+                {% set matched.flag = true %}
+                X |
+            {% endif %}
+        {% endfor %}
+        {% if not matched.flag %}
+            {% for v in c.values %}
+                |
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}

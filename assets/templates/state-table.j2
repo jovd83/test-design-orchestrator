@@ -1,0 +1,5 @@
+| State | {% for event in events %}{{ event }} | {% endfor %}
+|---|{% for event in events %}---|{% endfor %}
+{% for row in states %}
+| {{ row.name }} | {% for event in events %}{{ row.transitions.get(event, "Invalid") }} | {% endfor %}
+{% endfor %}

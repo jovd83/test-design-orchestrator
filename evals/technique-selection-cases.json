@@ -1,0 +1,32 @@
+[
+  {
+    "id": "selector-001",
+    "scenario": "Coupon code length must be 6 to 10 characters inclusive.",
+    "expected_primary": "Boundary Value Analysis"
+  },
+  {
+    "id": "selector-002",
+    "scenario": "Applicant type can be employee, contractor, or guest. Guests are rejected. Employees and contractors may continue.",
+    "expected_primary": "Equivalence Partitioning"
+  },
+  {
+    "id": "selector-003",
+    "scenario": "A transfer is allowed only when the source account is active, the destination account is active, and the amount is below the risk threshold.",
+    "expected_primary": "Decision Table"
+  },
+  {
+    "id": "selector-004",
+    "scenario": "Search results depend on browser, locale, sort order, and membership tier; exhaustive coverage is too large.",
+    "expected_primary": "Classification Tree / N-Wise"
+  },
+  {
+    "id": "selector-005",
+    "scenario": "An order can move from Draft to Submitted to Paid to Shipped, and cancellation is legal only before shipment.",
+    "expected_primary": "State Transition"
+  },
+  {
+    "id": "selector-006",
+    "scenario": "Given a registered shopper, when they apply a valid gift card during checkout, then the order total is reduced and the remaining balance is shown.",
+    "expected_primary": "Acceptance Criteria to Test Cases"
+  }
+]
