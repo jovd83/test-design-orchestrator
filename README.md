@@ -1,5 +1,10 @@
 # Test Design Orchestrator
 
+[![Validate Skills](https://github.com/jovd83/test-design-orchestrator/actions/workflows/validate.yml/badge.svg)](https://github.com/jovd83/test-design-orchestrator/actions/workflows/validate.yml)
+[![version](https://img.shields.io/badge/version-1.0.0-blue)](CHANGELOG.md)
+[![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jovd83)
+
 `test-design-orchestrator` is an AgentSkill for turning requirements into structured, traceable software test artifacts. It is built as a composite skill: the root skill chooses the best-fit black-box test design technique, routes execution to a technique-specific subskill, and optionally formats the result for downstream tooling.
 
 This repository is intentionally split into two layers:
