@@ -112,6 +112,15 @@ Read the selected subskill and its referenced guidance before generating output.
 - Do not browse for missing external schemas from inside this skill. If a format is unsupported, say so plainly.
 - Treat templates as output contracts, not as sources of missing business logic.
 
+## Gotchas
+
+- **Combinatorial Explosion**: Applying techniques like Decision Tables or Classification Trees to many variables can quickly lead to an unmanageable number of test cases. Always use reduction strategies (like N-Wise) and explain the coverage trade-off.
+- **Weak Oracles**: If the input requirements do not define expected outcomes for specific inputs or state transitions, the generated tests will have weak or generic oracles. Call these out as assumptions or open gaps.
+- **Masking Defects**: Combining multiple invalid inputs into a single test case can mask the true cause of a failure. Keep negative test cases independent unless specifically testing system resilience to multiple errors.
+- **Assumption Silencing**: It is tempting to "fill in the blanks" when requirements are vague (e.g., assuming a range is inclusive). Always make these inferences explicit to avoid a false sense of test accuracy.
+- **Transition Dead Ends**: In state-transition testing, missing requirements for "uncovered" events in certain states can lead to incomplete test suites. Explicitly identify states with no defined exit paths for common events.
+- **Tool-Specific Field Misalignment**: When exporting to external tools (e.g., Zephyr, Xray), missing source metadata like priority or story IDs can result in incomplete import files. This skill does not fabricate these IDs; it uses placeholders or asks for them.
+
 ## Reference Map
 
 - Shared conventions: `./references/test-design-shared-conventions.md`
