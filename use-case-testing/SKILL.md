@@ -4,8 +4,15 @@ description: Use this skill when requirements are expressed as actor-system inte
 metadata:
   author: jovd83
   version: v2.0.0
+  dispatcher-output-artifacts: use_case_tests, flow_map, coverage_summary
+  dispatcher-risk: low
+  dispatcher-writes-files: true
+  dispatcher-input-artifacts: use_case, actor_flows, preconditions, postconditions
+  dispatcher-capabilities: test-design, use-case-analysis, flow-based-scenario-generation
+  dispatcher-stack-tags: testing, design, use-case
+  dispatcher-accepted-intents: design_use_case_tests, model_actor_system_flows
+  dispatcher-category: testing
 ---
-
 # Use Case Testing
 
 ## Read First

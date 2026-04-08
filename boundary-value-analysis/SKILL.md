@@ -4,8 +4,15 @@ description: Use this skill when a requirement contains ordered values such as r
 metadata:
   author: jovd83
   version: v2.0.0
+  dispatcher-output-artifacts: boundary_partitions, test_cases, coverage_summary
+  dispatcher-risk: low
+  dispatcher-writes-files: true
+  dispatcher-input-artifacts: requirements, value_ranges, constraints, traceability_context
+  dispatcher-capabilities: test-design, boundary-value-analysis, partition-design
+  dispatcher-stack-tags: testing, design, boundary-analysis
+  dispatcher-accepted-intents: design_boundary_value_tests, identify_boundary_conditions
+  dispatcher-category: testing
 ---
-
 # Boundary Value Analysis
 
 ## Read First

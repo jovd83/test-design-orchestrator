@@ -4,8 +4,15 @@ description: Use this skill when requirements describe discrete business rules, 
 metadata:
   author: jovd83
   version: v2.0.0
+  dispatcher-output-artifacts: decision_table, test_cases, rule_coverage_summary
+  dispatcher-risk: low
+  dispatcher-writes-files: true
+  dispatcher-input-artifacts: requirements, rule_conditions, outcomes, traceability_context
+  dispatcher-capabilities: test-design, decision-table-analysis, rule-modeling
+  dispatcher-stack-tags: testing, design, rule-based
+  dispatcher-accepted-intents: design_decision_table_tests, model_business_rules
+  dispatcher-category: testing
 ---
-
 # Decision Table
 
 ## Read First

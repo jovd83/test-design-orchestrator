@@ -4,8 +4,15 @@ description: Use this skill when Codex needs to convert user stories or acceptan
 metadata:
   author: jovd83
   version: v2.0.0
+  dispatcher-output-artifacts: test_cases, behavior_scenarios, traceability_map
+  dispatcher-risk: low
+  dispatcher-writes-files: true
+  dispatcher-input-artifacts: acceptance_criteria, user_story, design_constraints, traceability_context
+  dispatcher-capabilities: test-design, acceptance-criteria-conversion, scenario-generation
+  dispatcher-stack-tags: testing, design, black-box
+  dispatcher-accepted-intents: design_tests_from_acceptance_criteria, generate_behavior_scenarios
+  dispatcher-category: testing
 ---
-
 # Acceptance Criteria to Test Cases
 
 ## Read First

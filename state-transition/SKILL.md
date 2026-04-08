@@ -4,8 +4,15 @@ description: Use this skill when a system has discrete states, events, guards, o
 metadata:
   author: jovd83
   version: v2.0.0
+  dispatcher-output-artifacts: state_model, transition_tests, coverage_summary
+  dispatcher-risk: low
+  dispatcher-writes-files: true
+  dispatcher-input-artifacts: requirements, states, events, guards
+  dispatcher-capabilities: test-design, state-transition-analysis, lifecycle-modeling
+  dispatcher-stack-tags: testing, design, state-model
+  dispatcher-accepted-intents: design_state_transition_tests, model_state_machine_behavior
+  dispatcher-category: testing
 ---
-
 # State Transition
 
 ## Read First

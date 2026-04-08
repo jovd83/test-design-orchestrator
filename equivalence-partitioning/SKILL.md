@@ -4,8 +4,15 @@ description: Use this skill when Codex needs to derive representative tests from
 metadata:
   author: jovd83
   version: v2.0.0
+  dispatcher-output-artifacts: equivalence_partitions, test_cases, coverage_summary
+  dispatcher-risk: low
+  dispatcher-writes-files: true
+  dispatcher-input-artifacts: requirements, input_domains, validation_rules, traceability_context
+  dispatcher-capabilities: test-design, equivalence-partitioning, partition-analysis
+  dispatcher-stack-tags: testing, design, partitioning
+  dispatcher-accepted-intents: design_equivalence_partition_tests, define_input_partitions
+  dispatcher-category: testing
 ---
-
 # Equivalence Partitioning
 
 ## Read First

@@ -4,8 +4,15 @@ description: Use this skill when Codex needs to model interacting parameters and
 metadata:
   author: jovd83
   version: v2.0.0
+  dispatcher-output-artifacts: classification_tree, nwise_matrix, test_cases
+  dispatcher-risk: low
+  dispatcher-writes-files: true
+  dispatcher-input-artifacts: requirements, parameters, interaction_constraints, traceability_context
+  dispatcher-capabilities: test-design, classification-tree, n-wise-generation
+  dispatcher-stack-tags: testing, design, combinatorial
+  dispatcher-accepted-intents: design_nwise_tests, model_parameter_interactions
+  dispatcher-category: testing
 ---
-
 # Classification Tree and N-Wise Testing
 
 ## Read First

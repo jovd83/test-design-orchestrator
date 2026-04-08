@@ -4,8 +4,15 @@ description: Use this skill when Codex needs to choose the best black-box test d
 metadata:
   author: jovd83
   version: v2.0.0
+  dispatcher-output-artifacts: technique_selection, routing_decision, rationale
+  dispatcher-risk: low
+  dispatcher-writes-files: false
+  dispatcher-input-artifacts: requirements, analysis_context, risk_notes, design_constraints
+  dispatcher-capabilities: test-technique-selection, black-box-analysis, design-routing
+  dispatcher-stack-tags: testing, design, orchestration
+  dispatcher-accepted-intents: select_test_design_technique, route_test_design_request
+  dispatcher-category: testing
 ---
-
 # Technique Selector
 
 Select the best-fit technique. Do not generate the final test cases here.
