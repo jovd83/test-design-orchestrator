@@ -4,6 +4,14 @@ description: Use this skill when Codex needs to turn requirements, user stories,
 metadata:
   author: jovd83
   version: v2.0.0
+  dispatcher-category: testing
+  dispatcher-capabilities: test-design, black-box-technique-selection, confirmation-test-design
+  dispatcher-accepted-intents: design_confirmation_tests, select_test_design_technique, generate_structured_test_cases
+  dispatcher-input-artifacts: requirement_text, acceptance_criteria, user_story, business_rules, use_case, state_model
+  dispatcher-output-artifacts: test_case_set, technique_selection, assumptions_log, routing_request
+  dispatcher-stack-tags: testing, framework-agnostic, black-box
+  dispatcher-risk: medium
+  dispatcher-writes-files: false
 ---
 
 # Test Design Orchestrator
@@ -61,6 +69,15 @@ Project-local persistent memory is optional and only appropriate when the user e
 
 Shared memory is out of scope for this skill. If the user wants cross-project or cross-agent reuse, integrate an external shared-memory skill instead of storing shared knowledge here.
 
+## Dispatcher Integration
+
+Use `skill-dispatcher` as the primary integration layer whenever this skill needs help beyond its own technique-selection and generation scope.
+
+- Prefer dispatching by intent instead of naming an external sibling skill directly.
+- Keep direct skill paths as a compatibility fallback only when the dispatcher has no valid registry match.
+- Keep shared memory limited to stable cross-project policy, not task-local routing decisions.
+- Preserve this skill's role: choose and apply black-box design techniques, then hand off formatting or downstream execution only when needed.
+
 ## Execution Workflow
 
 ### 1. Normalize the Request
@@ -93,7 +110,8 @@ Read the selected subskill and its referenced guidance before generating output.
 
 ### 4. Hand Off Formatting And Export
 
-- If the user wants import-ready, narrative-format, or tool-specific output after the tests are designed, use `C:\projects\skills\test-artifact-export-skill\SKILL.md`.
+- If the user wants import-ready, narrative-format, or tool-specific output after the tests are designed, dispatch `render_test_artifact` through `skill-dispatcher`.
+- Use `C:\projects\skills\test-artifact-export-skill\SKILL.md` only as a compatibility fallback when dispatcher routing is unavailable.
 - Keep this skill focused on technique selection and test generation.
 - Keep unsupported formats out of scope. Do not invent schemas or field mappings.
 
