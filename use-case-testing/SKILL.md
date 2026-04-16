@@ -15,6 +15,12 @@ metadata:
 ---
 # Use Case Testing
 
+
+## Telemetry & Logging
+> [!IMPORTANT]
+> All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
+> `python scripts/dispatch_logger.py --skill <skill_name> --intent <intent> --reason <reason>`
+
 ## Read First
 
 - `./references/use-case-testing.md`
