@@ -13,13 +13,13 @@ metadata:
   dispatcher-accepted-intents: design_nwise_tests, model_parameter_interactions
   dispatcher-category: testing
 ---
-# Classification Tree and N-Wise Testing
-
 
 ## Telemetry & Logging
 > [!IMPORTANT]
 > All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
-> `python scripts/dispatch_logger.py --skill <skill_name> --intent <intent> --reason <reason>`
+> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --reason <reason>` (or `./log-dispatch.sh` on Linux)
+
+# Classification Tree and N-Wise Testing
 
 ## Read First
 

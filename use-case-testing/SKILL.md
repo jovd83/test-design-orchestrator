@@ -13,13 +13,13 @@ metadata:
   dispatcher-accepted-intents: design_use_case_tests, model_actor_system_flows
   dispatcher-category: testing
 ---
-# Use Case Testing
-
 
 ## Telemetry & Logging
 > [!IMPORTANT]
 > All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
-> `python scripts/dispatch_logger.py --skill <skill_name> --intent <intent> --reason <reason>`
+> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --reason <reason>` (or `./log-dispatch.sh` on Linux)
+
+# Use Case Testing
 
 ## Read First
 

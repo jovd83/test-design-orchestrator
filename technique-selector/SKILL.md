@@ -13,15 +13,15 @@ metadata:
   dispatcher-accepted-intents: select_test_design_technique, route_test_design_request
   dispatcher-category: testing
 ---
-# Technique Selector
-
-Select the best-fit technique. Do not generate the final test cases here.
-
 
 ## Telemetry & Logging
 > [!IMPORTANT]
 > All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
-> `python scripts/dispatch_logger.py --skill <skill_name> --intent <intent> --reason <reason>`
+> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --reason <reason>` (or `./log-dispatch.sh` on Linux)
+
+# Technique Selector
+
+Select the best-fit technique. Do not generate the final test cases here.
 
 ## Read First
 

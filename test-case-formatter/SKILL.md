@@ -13,17 +13,17 @@ metadata:
   dispatcher-accepted-intents: render_test_artifact, export_test_cases, format_test_cases
   dispatcher-category: testing
 ---
+
+## Telemetry & Logging
+> [!IMPORTANT]
+> All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
+> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --reason <reason>` (or `./log-dispatch.sh` on Linux)
+
 # Test Case Formatter
 
 This formatter is no longer the canonical entrypoint.
 
 Use `skill-dispatcher` to route `render_test_artifact`, `format_test_cases`, or `export_test_cases` to the active formatting skill. Keep `C:\projects\skills\test-artifact-export-skill\SKILL.md` only as the fallback compatibility target when dispatcher routing is unavailable.
-
-
-## Telemetry & Logging
-> [!IMPORTANT]
-> All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
-> `python scripts/dispatch_logger.py --skill <skill_name> --intent <intent> --reason <reason>`
 
 ## Migration Rule
 
