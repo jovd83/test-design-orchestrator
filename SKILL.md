@@ -3,8 +3,8 @@ name: test-design-orchestrator
 description: Use this skill when Codex needs to turn requirements, user stories, acceptance criteria, business rules, use cases, or state models into structured software test artifacts. It selects the most appropriate black-box test design technique and routes work to the matching generation subskill. When the work is already designed and only needs formatting or export, prefer the standalone `test-artifact-export-skill` skill.
 metadata:
   version: \"1.0.0\"
-    dispatcher-layer: execution
-    dispatcher-lifecycle: active
+  dispatcher-layer: execution
+  dispatcher-lifecycle: active
   author: jovd83
   version: v2.0.0
   dispatcher-category: testing
