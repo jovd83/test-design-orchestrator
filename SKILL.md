@@ -1,12 +1,9 @@
 ---
 name: test-design-orchestrator
-description: Use this skill when Codex needs to turn requirements, user stories, acceptance criteria, business rules, use cases, or state models into structured software test artifacts. It selects the most appropriate black-box test design technique and routes work to the matching generation subskill. When the work is already designed and only needs formatting or export, prefer the standalone `test-artifact-export-skill` skill.
+description: Turn requirements, user stories, acceptance criteria, business rules, use cases, or state models into structured test artifacts. Selects the best black-box test design technique and routes work to the matching subskill. For format-only work, prefer test-artifact-export-skill.
 metadata:
-  version: \"1.0.0\"
   dispatcher-layer: execution
   dispatcher-lifecycle: active
-  author: jovd83
-  version: v2.0.0
   dispatcher-category: testing
   dispatcher-capabilities: test-design, black-box-technique-selection, confirmation-test-design
   dispatcher-accepted-intents: design_confirmation_tests, select_test_design_technique, generate_structured_test_cases
@@ -15,14 +12,18 @@ metadata:
   dispatcher-stack-tags: testing, framework-agnostic, black-box
   dispatcher-risk: medium
   dispatcher-writes-files: false
+
 ---
 
 ## Telemetry & Logging
 > [!IMPORTANT]
 > All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
-> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --reason <reason>` (or `./log-dispatch.sh` on Linux)
+> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --model <model_name> --reason <reason>` (or `./log-dispatch.sh` on Linux)
 
 # Test Design Orchestrator
+
+> **Author:** jovd83 | **Version:** 1.0.1
+
 
 Coordinate a disciplined test-design workflow instead of free-form brainstorming.
 
